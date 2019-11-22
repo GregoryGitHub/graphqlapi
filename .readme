@@ -1,0 +1,37 @@
+Api básica com express e graphql.
+
+Iniciando a Aplicação.
+
+dentro do diretório da aplicação rode o comando node index.js. 
+Se estiver utilizando o Visual Studio code Aperte f5 para iniciar o debug.
+
+abra o navegador em http://localhost:3000/graphql
+
+PS.Todos os dados da aplicação só vivem durante a sua execução.
+
+Inserindo dados
+
+Para inserir um novo usuário utilize a seuguinte mutation
+ mutation{
+   createUser(
+     name:"Alquimedes Rogerio de Souza.",
+     email:"example@example.com",
+     age:45
+   ){
+     id
+     name
+   }
+ }
+
+ Recuperando dados.
+
+ A query sequinte retorna todos os campos do usuário cadastrado.
+ {
+     user{
+         id
+         name
+         email
+         age
+     }
+ }
+
